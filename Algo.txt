@@ -1,0 +1,67 @@
+Algorithm: Check Balanced Parenthesis using Stack
+
+Step-1:
+	Create an Empty Stack
+	Stack S for storing opening brackets
+
+Step-2:
+	Input an expression string
+
+Step-3:
+	Iterate through each character in the string from left to right
+
+	Case-1:
+
+	    If the current character is an opening bracket ( or [ or {
+
+	    Push the character into stack S
+
+	Case-2:
+
+	    If the current character is a closing bracket  ) or ] or }
+	
+     	    Step-1
+
+		If stack S is empty
+			Return Not Balanced
+
+	    Step-2
+
+		Else
+		Pop the top element from stack → store it in a variable called open
+
+	    Step-3
+
+		Check if open and current closing bracket match
+
+		If ( → ) 
+
+		If [ → ] 
+
+		If { → } 
+
+		If not matching
+			Return Not Balanced
+
+	Case-3
+	    Continue the process until all characters are processed
+
+Step-4:
+
+    After processing the entire string
+
+If stack S is empty
+	Return Balanced
+Else
+	Return Not Balanced
+
+
+Final Output:
+	If all brackets matched correctly → Balanced
+	Otherwise → Not Balanced
+
+Key Idea:
+	
+Push opening brackets
+Pop and match when closing comes
+Stack must be empty at end
